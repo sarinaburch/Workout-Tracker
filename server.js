@@ -18,10 +18,10 @@ app.use(express.static("develop/public"));
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/", { useNewUrlParser: true });
 
-db.Workout.create({ name: "Workout Tracker" })
-    .then(dbWorkout => {
-        console.log(dbWorkout);
-    });
+// db.Workout.create({ name: "Workout Tracker" })
+//     .then(dbWorkout => {
+//         console.log(dbWorkout);
+//     });
    
 app.use(require("./Controllers/exercises"));
 app.use(require("./Controllers/workouts"));
