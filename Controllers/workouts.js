@@ -1,11 +1,6 @@
 var express = require("express");
-var mongoose = require("mongoose")
+var mongoose = require("mongoose");
+const { db } = require("../models/Workout");
 
 var router = express.Router();
 
-
-router.get("/", function(req, res) {
-    Workout.all(function(data) {
-        var 
-    })
-})
