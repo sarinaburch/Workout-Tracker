@@ -31,8 +31,8 @@ app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "./Views/index.html"));
 })
 
-// app.use(require("./Controllers/exercises"));
-// app.use(require("./Controllers/workouts"));
+app.use(require("./Controllers/exercises"));
+app.use(require("./Controllers/workouts"));
 
 app.listen(PORT, () => {
     console.log(`App running on port ${PORT}!`);

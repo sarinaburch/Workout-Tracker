@@ -4,3 +4,4 @@ const { db } = require("../models/Workout");
 
 var router = express.Router();
 
+module.exports = router;
