@@ -1,3 +1,4 @@
+// const { Workout } = require("../models/Workout");
 var db = require("../models");
 
 module.exports = app => {
@@ -11,15 +12,23 @@ module.exports = app => {
         })
     });
 
-    app.post("/api/workouts", (req, res) => {
-        db.Workout.create({}, (err, data) => {
-            if (err) {
-                console.log(err)
-            } else {
-                res.json(data)
-            }
-        })  
-    });
+//  var router = require("express").Router();
+//  router.post("/api/workouts", (req, res, next) => {
 
-    
+//  })
+
+    // app.put("/api/workouts:id", ({body,params}, res) => {
+    //     Workout.findByIdAndUpdate(
+    //         params.id,
+    //         {$push:{exercise:body} },
+    //         {new: true,runValidators:true}, (err, data) => {
+    //             if (err) {
+    //                 console.log(err)
+    //             } else {
+    //                 res.json(data)
+    //             }
+    //         }
+    //     )
+
+    // })
 }

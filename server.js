@@ -15,24 +15,11 @@ app.use(morgan("dev"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use(express.static("develop/public"));
-
+app.use(express.static("public"));
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout-tracker", { useNewUrlParser: true });
 
-db.Workout.create({ name: "Workout Tracker" })
-    .then(dbWorkout => {
-        console.log(dbWorkout);
-    })
-    .catch(({ message }) => {
-        console.log('this is the error:' + message);
-    });
-
-app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "./Views/index.html"));
-})
-
-app.use(require("./Controllers/exercises"));
-app.use(require("./Controllers/workouts"));
+app.use(require("./routes/apiroutes"));
+app.use(require("./routes/htmlroutes"));
 
 app.listen(PORT, () => {
     console.log(`App running on port ${PORT}!`);
