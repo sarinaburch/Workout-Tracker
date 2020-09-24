@@ -1,4 +1,4 @@
-# Unit 17 Nosql Homework: Workout Tracker
+# Workout Tracker
 
 https://still-plateau-83775.herokuapp.com/
 
