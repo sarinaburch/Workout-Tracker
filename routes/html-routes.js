@@ -2,7 +2,7 @@ const path = require("path");
 const app = require("express").Router();
 
     app.get("/", (req, res) => {
-        res.sendFile(path.join(__dirname, "../public/index.html"))
+        res.sendFile(path.join(__dirname, "../pubic/index.html"))
     })
     app.get("/exercise", (req, res) => {
         res.sendFile(path.join(__dirname, "../public/exercise.html"))
