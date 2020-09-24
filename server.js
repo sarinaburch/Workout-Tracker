@@ -6,7 +6,7 @@ const path = require("path")
 
 const PORT = process.env.PORT || 8000;
 
-const db = require("./models");
+const db = require("./models/Workout");
 
 const app = express();
 
