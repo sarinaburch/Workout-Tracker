@@ -1,6 +1,6 @@
 var express = require("express");
 var mongoose = require("mongoose");
-
+var db = require("../models")
 
 var router = express.Router();
 
