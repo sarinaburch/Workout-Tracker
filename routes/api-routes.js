@@ -36,7 +36,7 @@ var router = express.Router()
 
     app.put("/api/workouts/:id", (req, res) => {
         db.Workout.findByIdAndUpdate(req.params.id,
-            { $push:{exercise: req.body} } )
+            { $push:{exercises: req.body} } )
             .then(dbWorkout => {
                 res.json(dbWorkout);
               })
@@ -44,5 +44,6 @@ var router = express.Router()
                 res.json(err);
               });
 
-    })
+    });
+
 module.exports = app;
